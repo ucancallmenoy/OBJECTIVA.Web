@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 4rem;
+}
+
+.course-container, .path-container {
+  flex: 1;
+  padding: 3rem;
+}
+
+.path-container{
+  margin-left: 5rem;
+}
+
+.course-item {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.course-icon {
+  font-size: 2.5rem;
+  color: #6C63FF;
+  margin-bottom: 1rem;
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.course-path {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px; /* Adjust the gap as needed */
+}
+
+.course-step-list {
+  display: contents;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.course-step {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.step-icon {
+  font-size: 2rem;
+  color: #6C63FF;
+  margin-right: 1rem;
+}
+.lesson-number {
+  font-size: 0.8em;
+  color: #888;
+  margin-left: 5px;
+} 
