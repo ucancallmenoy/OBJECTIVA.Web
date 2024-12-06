@@ -1,73 +1,43 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  padding-top: 4rem;
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Changed to 4 columns */
+  gap: 30px;
+  max-width: 1200px;
+  padding: 20px;
+  margin-top: 69px;
 }
 
-.course-container, .path-container {
-  flex: 1;
-  padding: 3rem;
-}
-
-.path-container{
-  margin-left: 5rem;
-}
-
-.course-item {
-  background-color: white;
-  padding: 2rem;
+.feature-box {
+  background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 20px;
+  transition: transform 0.2s;
+  cursor: pointer;
 }
 
-.course-icon {
-  font-size: 2.5rem;
-  color: #6C63FF;
-  margin-bottom: 1rem;
+.feature-box:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+  .icon{
+    color: #2f2b6d;
+  }
 }
 
-.course-details {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  color: #666;
-  font-size: 0.9rem;
+.icon {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
-.course-path {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px; /* Adjust the gap as needed */
+h3 {
+  font-size: 18px;
+  color: #343a40;
+  margin: 10px 0;
 }
 
-.course-step-list {
-  display: contents;
-  flex-direction: column;
-  align-items: flex-start;
+p {
+  font-size: 14px;
+  color: #6c757d;
 }
-
-.course-step {
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  border: 1px solid #E5E5E5;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.step-icon {
-  font-size: 2rem;
-  color: #6C63FF;
-  margin-right: 1rem;
-}
-.lesson-number {
-  font-size: 0.8em;
-  color: #888;
-  margin-left: 5px;
-} 

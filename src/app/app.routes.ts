@@ -11,14 +11,15 @@ import { AbstractionComponent } from './pages/lessons-folder/abstraction/abstrac
 import { EncapsulationComponent } from './pages/lessons-folder/encapsulation/encapsulation.component';
 import { InheritanceComponent } from './pages/lessons-folder/inheritance/inheritance.component';
 import { PolymorphismComponent } from './pages/lessons-folder/polymorphism/polymorphism.component';
-import { Lesson1OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson1-overview/lesson1-overview.component';
-import { Lesson2OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson2-overview/lesson2-overview.component';
-import { Lesson3OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson3-overview/lesson3-overview.component';
-import { Lesson4OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson4-overview/lesson4-overview.component';
-import { Lesson5OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson5-overview/lesson5-overview.component';
-import { Lesson6OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson6-overview/lesson6-overview.component';
-import { Lesson7OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson7-overview/lesson7-overview.component';
-import { Lesson8OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/lesson8-overview/lesson8-overview.component';
+import { Introduction1OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction1-overview/introduction1-overview.component';
+import { Introduction2OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction2-overview/introduction2-overview.component';
+import { Introduction3OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction3-overview/introduction3-overview.component';
+import { Introduction4OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction4-overview/introduction4-overview.component';
+import { Introduction5OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction5-overview/introduction5-overview.component';
+import { Introduction6OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction6-overview/introduction6-overview.component';
+import { Introduction7OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction7-overview/introduction7-overview.component';
+import { Introduction8OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/introduction/introduction8-overview/introduction8-overview.component';
+
 
 
 export const routes: Routes = [
@@ -80,38 +81,38 @@ export const routes: Routes = [
             // Introduction Overview
             {
                 path: 'introduction-to-object-oriented-programming-overview',
-                component: Lesson1OverviewComponent
+                component: Introduction1OverviewComponent
             },
             {
                 path: 'understanding-object-and-classes-overview',
-                component: Lesson2OverviewComponent
+                component: Introduction2OverviewComponent
             },
             {
                 path: 'introduction-to-java-overview',
-                component: Lesson3OverviewComponent
+                component: Introduction3OverviewComponent
             },
             {
                 path: 'basic-oop-concepts-in-java-overview',
-                component: Lesson4OverviewComponent
+                component: Introduction4OverviewComponent
             },
             {
                 path: 'class-structure-and-access-overview',
-                component: Lesson5OverviewComponent
+                component: Introduction5OverviewComponent
             },
             {
                 path: 'basic-object-oriented-design-overview',
-                component: Lesson6OverviewComponent
+                component: Introduction6OverviewComponent
             },
             {
                 path: 'java-class-libraries-overview-overview',
-                component: Lesson7OverviewComponent
+                component: Introduction7OverviewComponent
             },
             {
                 path: 'object-interactions-overview',
-                component: Lesson8OverviewComponent
+                component: Introduction8OverviewComponent
             }
-
             // Abstraction Overview
+
             // Encapsulation Overview
             // Inheritance Overview
             // Polymorphism Overview
