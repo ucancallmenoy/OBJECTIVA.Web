@@ -1,29 +1,35 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-polymorphism',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './polymorphism.component.html',
   styleUrl: './polymorphism.component.css'
 })
 export class PolymorphismComponent {
-  // Define the levels
-  levels = [
-    { name: 'Level 1' },
-    { name: 'Level 2' },
-    { name: 'Level 3' },
-    { name: 'Level 4' },
-    { name: 'Level 5' },
-  ];
+  constructor(private router: Router) {}
 
-  currentLevel = 0; // Track the current level
-
-  // Set the clicked level
-  setLevel(index: number) {
-    if (index <= this.currentLevel + 1) {
-      this.currentLevel = index;
-    }
+  lesson1Overview() {
+    this.router.navigate(['understanding-polymorphism-overview']);
   }
+  lesson2Overview() {
+    this.router.navigate(['compile-time-polymorphism-overview']);
+  }
+  lesson3Overview() {
+    this.router.navigate(['runtime-polymorphism-overview']);
+  }
+  lesson4Overview() {
+    this.router.navigate(['advanced-polymorphic-concepts-overview']);
+  }
+  lesson5Overview() {
+    this.router.navigate(['polymorphism-with-interfaces-overview']);
+  }
+  lesson6Overview() {
+    this.router.navigate(['polymorphism-implementation-in-java-overview']);
+  }
+
 }

@@ -1,29 +1,34 @@
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-inheritance',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './inheritance.component.html',
   styleUrl: './inheritance.component.css'
 })
 export class InheritanceComponent {
-  // Define the levels
-  levels = [
-    { name: 'Level 1' },
-    { name: 'Level 2' },
-    { name: 'Level 3' },
-    { name: 'Level 4' },
-    { name: 'Level 5' },
-  ];
-
-  currentLevel = 0; // Track the current level
-
-  // Set the clicked level
-  setLevel(index: number) {
-    if (index <= this.currentLevel + 1) {
-      this.currentLevel = index;
-    }
+  constructor(private router: Router) {}
+  
+  lesson1Overview() {
+    this.router.navigate(['understanding-inheritance-overview']);
+  }
+  lesson2Overview() {
+    this.router.navigate(['single-inheritance-overview']);
+  }
+  lesson3Overview() {
+    this.router.navigate(['types-of-inheritance-in-java-overview']);
+  }
+  lesson4Overview() {
+    this.router.navigate(['methods-overriding-overview']);
+  }
+  lesson5Overview() {
+    this.router.navigate(['advanced-inheritance-concepts-overview']);
+  }
+  lesson6Overview() {
+    this.router.navigate(['inheritance-implementation-in-java-overview']);
   }
 }

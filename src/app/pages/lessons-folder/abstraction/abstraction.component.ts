@@ -1,29 +1,29 @@
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-abstraction',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './abstraction.component.html',
   styleUrl: './abstraction.component.css'
 })
 export class AbstractionComponent {
-  // Define the levels
-  levels = [
-    { name: 'Level 1' },
-    { name: 'Level 2' },
-    { name: 'Level 3' },
-    { name: 'Level 4' },
-    { name: 'Level 5' },
-  ];
+  constructor(private router: Router) {}
 
-  currentLevel = 0; // Track the current level
-
-  // Set the clicked level
-  setLevel(index: number) {
-    if (index <= this.currentLevel + 1) {
-      this.currentLevel = index;
-    }
+  lesson1Overview() {
+    this.router.navigate(['understanding-abstraction-overview']);
   }
+  lesson2Overview() {
+    this.router.navigate(['abstract-classes-overview']);
+  }
+  lesson3Overview() {
+    this.router.navigate(['interfaces-overview']);
+  }
+  lesson4Overview() {
+    this.router.navigate(['abstraction-implementation-in-java-overview']);
+  }
+  
 }
