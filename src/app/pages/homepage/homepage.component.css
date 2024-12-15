@@ -84,11 +84,13 @@ hr {
     border: 1px solid #000000;
     overflow: hidden;
     transition: transform 0.6s ease;
+    margin-bottom: 50px;
   }
   .lesson-home-card:hover{
     transform: translateY(-20px);
   }
-  .lesson-home-card img{
+  .lesson-home-card i{
+    margin-top: 25px;
     width: 100%;
     height: auto;
     object-fit: cover;
