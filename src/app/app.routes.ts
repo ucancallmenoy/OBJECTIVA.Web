@@ -41,6 +41,14 @@ import { Polymorphism3OverviewComponent } from './pages/lessons-folder/lessons-o
 import { Polymorphism4OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/polymorphism/polymorphism4-overview/polymorphism4-overview.component';
 import { Polymorphism5OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/polymorphism/polymorphism5-overview/polymorphism5-overview.component';
 import { Polymorphism6OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/polymorphism/polymorphism6-overview/polymorphism6-overview.component';
+import { IntroductionContent1Component } from './pages/lessons-content/introduction/introduction-content-1/introduction-content-1.component';
+import { IntroductionContent2Component } from './pages/lessons-content/introduction/introduction-content-2/introduction-content-2.component';
+import { IntroductionContent3Component } from './pages/lessons-content/introduction/introduction-content-3/introduction-content-3.component';
+import { IntroductionContent4Component } from './pages/lessons-content/introduction/introduction-content-4/introduction-content-4.component';
+import { IntroductionContent5Component } from './pages/lessons-content/introduction/introduction-content-5/introduction-content-5.component';
+import { IntroductionContent6Component } from './pages/lessons-content/introduction/introduction-content-6/introduction-content-6.component';
+import { IntroductionContent7Component } from './pages/lessons-content/introduction/introduction-content-7/introduction-content-7.component';
+import { IntroductionContent8Component } from './pages/lessons-content/introduction/introduction-content-8/introduction-content-8.component';
 
 export const routes: Routes = [
     {
@@ -223,6 +231,41 @@ export const routes: Routes = [
             {
                 path: 'polymorphism-implementation-in-java-overview',
                 component: Polymorphism6OverviewComponent
+            },
+
+            // CONTENT
+            // INTRODUCTION CONTENT
+            {
+                path: 'introduction-to-object-oriented-programming',
+                component: IntroductionContent1Component
+            },
+            {
+                path: 'understanding-object-and-classes',
+                component: IntroductionContent2Component
+            },
+            {
+                path: 'introduction-to-java',
+                component: IntroductionContent3Component
+            },
+            {
+                path: 'basic-oop-concepts-in-java',
+                component: IntroductionContent4Component
+            },
+            {
+                path: 'class-structure-and-access',
+                component: IntroductionContent5Component
+            },
+            {
+                path: 'basic-object-oriented-design',
+                component: IntroductionContent6Component
+            },
+            {
+                path: 'java-class-libraries',
+                component: IntroductionContent7Component
+            },
+            {
+                path: 'object-interactions',
+                component: IntroductionContent8Component
             },
         ]
     }
