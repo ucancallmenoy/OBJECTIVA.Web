@@ -1,88 +1,34 @@
-<div class="container">
-    <!-- First Container -->
-    <div class="first-container">
-      <button (click)="showSecondContainer()">Show Second Container</button>
-    </div>
-  
-    <!-- Second Container (Initially Hidden) -->
-    <div class="second-container" *ngIf="isSecondContainerVisible">
-      <p>This is the second container. It is now visible!</p>
-      <button (click)="showThirdContainer()">Show Third Container</button>
-    </div>
-
-    <div class="third-container" *ngIf="isThirdContainerVisible">
-        <p>This is the third</p>
-    </div>
-</div>
-
 <div class="lesson-container">
-    <!-- Header Section -->
-    <header class="header">
-      <h1>Welcome to the Programming Lesson</h1>
-      <p>Learn the basics of programming and Object-Oriented Programming (OOP)</p>
-    </header>
-  
-    <!-- Section 1: What is Programming -->
-    <section class="lesson-section" *ngIf="visibleSections >= 1">
-      <h2>1. What is Programming?</h2>
-      <p>
-        Programming is the process of creating instructions for computers to
-        perform tasks. It involves writing code in programming languages such as
-        Python, Java, or C++.
-      </p>
-      <ul>
-        <li>It helps automate tasks.</li>
-        <li>It is the backbone of software development.</li>
-        <li>It enables problem-solving and innovation.</li>
-      </ul>
-      <button (click)="showNextSection()" *ngIf="visibleSections === 1">
-        Next: What is OOP?
-      </button>
-    </section>
-  
-    <!-- Section 2: What is Object-Oriented Programming -->
-    <section class="lesson-section" *ngIf="visibleSections >= 2">
-      <h2>2. What is Object-Oriented Programming (OOP)?</h2>
-      <p>
-        Object-Oriented Programming (OOP) is a programming paradigm based on the
-        concept of "objects," which can contain data and methods.
-      </p>
-      <div class="highlight-box">
-        <p><strong>Key Concepts of OOP:</strong></p>
-        <ul>
-          <li><strong>Class:</strong> A blueprint for creating objects.</li>
-          <li><strong>Object:</strong> An instance of a class.</li>
-          <li><strong>Encapsulation:</strong> Bundling of data and methods.</li>
-          <li><strong>Inheritance:</strong> Reusing code across classes.</li>
-          <li><strong>Polymorphism:</strong> Ability to use methods in different ways.</li>
-        </ul>
+  <!-- Header Section -->
+  <header class="header">
+    <img src="assets/what-is-programming.png" (click)="showNextSection('s1')" *ngIf="visibleSections === 1" class="interactive-image" alt="What is Programming?">
+  </header>
+
+  <!-- Section 1: What is Programming -->
+  <section id="s1" class="lesson-section" *ngIf="visibleSections >= 2">
+    <div class="content-container">
+      <h1>What is Programming?</h1>
+      <p>Programming is the process of writing instructions for a computer to follow or creating a computer program.</p>
+      <img src="assets/what-is-programming.png" alt="">
+      <div class="button-container">
+        <button (click)="showNextSection('s2')" *ngIf="visibleSections === 2">What are the programming paradigms</button>
       </div>
-      <button (click)="showNextSection()" *ngIf="visibleSections === 2">
-        Next: Benefits of OOP
-      </button>
-    </section>
-  
-    <!-- Section 3: Benefits of OOP -->
-    <section class="lesson-section" *ngIf="visibleSections >= 3">
-      <h2>3. Benefits of Object-Oriented Programming</h2>
-      <p>OOP offers numerous advantages in software development:</p>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <h3>Modularity</h3>
-          <p>Code is easier to manage, maintain, and debug.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Reusability</h3>
-          <p>Code can be reused via inheritance and polymorphism.</p>
-        </div>
-        <div class="benefit-card">
-          <h3>Scalability</h3>
-          <p>OOP makes it easy to extend projects as they grow.</p>
-        </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Programming Paradigms -->
+  <section id="s2" class="lesson-section" *ngIf="visibleSections >= 3">
+    <div class="content-container">
+      <div class="button-container">
+        <button (click)="showNextSection('s3')" *ngIf="visibleSections === 3">Why do programmers need programming paradigms</button>
       </div>
-      <p>You've completed the lesson!</p>
-    </section>
-  </div>
-  
-  
-  
+    </div>
+  </section>
+
+  <!-- Section 3: Why Programming Paradigms -->
+  <section id="s3" class="lesson-section" *ngIf="visibleSections >= 4">
+    <div class="content-container">
+      <!-- Add content here if needed -->
+    </div>
+  </section>
+</div>

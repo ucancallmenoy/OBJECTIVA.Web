@@ -11,23 +11,15 @@ import { RouterModule } from '@angular/router';
   styleUrl: './introduction-content-1.component.css'
 })
 export class IntroductionContent1Component {
-// Boolean flag to control visibility of the second container
-isSecondContainerVisible: boolean = false;
-isThirdContainerVisible: boolean = false;
-
-// Method to toggle visibility
-showSecondContainer(): void {
-  this.isSecondContainerVisible = true;
-}
-showThirdContainer(): void {
-  this.isThirdContainerVisible = true;
-}
 
 // Track the visible sections
 visibleSections: number = 1;
 
 // Method to show the next section
-showNextSection(): void {
-  this.visibleSections += 1;
+showNextSection(sectionId: string) {
+  this.visibleSections++;
+  setTimeout(() => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  }, 100); // Delay to ensure DOM updates
 }
 }
