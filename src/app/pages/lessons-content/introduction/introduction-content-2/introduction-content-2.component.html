@@ -1,7 +1,7 @@
 <div class="lesson-container">
     <!-- Header Section -->
     <header class="header">
-        <img src="assets/what-is-objects.png" (click)="showNextSection('s1')" *ngIf="visibleSections === 1" class="interactive-image" alt="What is Programming?">
+        <img src="assets/what-is-objects.gif" (click)="showNextSection('s1')" *ngIf="visibleSections === 1" class="interactive-image" alt="What is Programming?">
     </header>
 
     <section id="s1" class="lesson-section" *ngIf="visibleSections >= 2">
@@ -43,7 +43,7 @@
         <img src="assets/object.png" alt="">
         <div class="button-container">
             <button onclick="location.href='introduction'" *ngIf="visibleSections === 4">BACK TO LESSONS</button>
-          </div>
+        </div>
     </section>
 
 </div>

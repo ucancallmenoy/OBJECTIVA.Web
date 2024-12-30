@@ -1,1 +1,12 @@
-<p>introduction-content-4 works!</p>
+<div class="lesson-container">
+    <!-- Header Section -->
+    <header class="header">
+        <img src="assets/what-is-objects.png" (click)="showNextSection('s1')" *ngIf="visibleSections === 1" class="interactive-image" alt="What is Programming?">
+    </header>
+
+    <section id="s1" class="lesson-section" *ngIf="visibleSections >= 2">
+        <div class="content-container">
+            
+        </div>
+    </section>
+</div>
