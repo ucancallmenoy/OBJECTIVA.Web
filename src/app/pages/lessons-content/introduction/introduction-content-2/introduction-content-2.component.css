@@ -9,9 +9,6 @@
     text-align: center;
     }
   
-    .interactive-image:hover {
-      transform: scale(1.1);
-    }
   
     .interactive-image {
       margin-top: 100px;

@@ -9,10 +9,6 @@
     text-align: center;
     }
   
-    .interactive-image:hover {
-      transform: scale(1.1);
-    }
-  
     .interactive-image {
       margin-top: 100px;
       cursor: pointer;
@@ -84,4 +80,34 @@
           opacity: 1;
           transform: translateY(0);
         }
+      }
+      .carousel-control-prev {
+        left: 10px;
+      }
+      
+      .carousel-control-next {
+        right: 10px;
+      }
+      
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        background: none;
+      }
+      
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        filter: invert(100%);
+      }
+      .carousel-control-prev,
+.carousel-control-next {
+  border: none;
+  background: none;
+  color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+      .comment {
+        color: rgb(194, 194, 194);
       }
