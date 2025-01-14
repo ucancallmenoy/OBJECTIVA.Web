@@ -26,7 +26,6 @@ import { Abstraction4OverviewComponent } from './pages/lessons-folder/lessons-ov
 import { Encapsulation1OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation1-overview/encapsulation1-overview.component';
 import { Encapsulation2OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation2-overview/encapsulation2-overview.component';
 import { Encapsulation3OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation3-overview/encapsulation3-overview.component';
-import { Encapsulation4OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation4-overview/encapsulation4-overview.component';
 import { Encapsulation5OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation5-overview/encapsulation5-overview.component';
 import { Encapsulation6OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/encapsulation/encapsulation6-overview/encapsulation6-overview.component';
 import { Inheritance1OverviewComponent } from './pages/lessons-folder/lessons-overview-folder/inheritance/inheritance1-overview/inheritance1-overview.component';
@@ -49,6 +48,12 @@ import { IntroductionContent5Component } from './pages/lessons-content/introduct
 import { IntroductionContent6Component } from './pages/lessons-content/introduction/introduction-content-6/introduction-content-6.component';
 import { IntroductionContent7Component } from './pages/lessons-content/introduction/introduction-content-7/introduction-content-7.component';
 import { IntroductionContent8Component } from './pages/lessons-content/introduction/introduction-content-8/introduction-content-8.component';
+import { EncapsulationContent1Component } from './pages/lessons-content/encapsulation/encapsulation-content-1/encapsulation-content-1.component';
+import { EncapsulationContent2Component } from './pages/lessons-content/encapsulation/encapsulation-content-2/encapsulation-content-2.component';
+import { EncapsulationContent3Component } from './pages/lessons-content/encapsulation/encapsulation-content-3/encapsulation-content-3.component';
+import { EncapsulationContent4Component } from './pages/lessons-content/encapsulation/encapsulation-content-4/encapsulation-content-4.component';
+import { EncapsulationContent5Component } from './pages/lessons-content/encapsulation/encapsulation-content-5/encapsulation-content-5.component';
+import { Quiz1Component } from './pages/quiz-content/quiz-1/quiz-1.component';
 
 export const routes: Routes = [
     {
@@ -171,10 +176,6 @@ export const routes: Routes = [
                 component: Encapsulation3OverviewComponent
             },
             {
-                path:'java-bean-standard-overview',
-                component: Encapsulation4OverviewComponent
-            },
-            {
                 path:'data-validation-overview',
                 component: Encapsulation5OverviewComponent
             },
@@ -267,6 +268,36 @@ export const routes: Routes = [
                 path: 'object-interactions',
                 component: IntroductionContent8Component
             },
+
+            // ENCAPSULATION CONTENT
+            {
+                path: 'understanding-encapsulation',
+                component: EncapsulationContent1Component
+            },
+            {
+                path: 'access-modifiers',
+                component: EncapsulationContent2Component
+            },
+            {
+                path: 'getters-and-setters',
+                component: EncapsulationContent3Component
+            },
+            {
+                path: 'data-validation',
+                component: EncapsulationContent4Component
+            },
+            {
+                path: 'implementation-in-java',
+                component: EncapsulationContent5Component
+            },
+
         ]
-    }
+    },
+    
+    // QUIZ (NO HEADER NAV) ROUTES
+    {
+        path: 'quiz-about-object-oriented-programming',
+        component: Quiz1Component
+    },
+
 ];
