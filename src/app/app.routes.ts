@@ -48,6 +48,10 @@ import { IntroductionContent5Component } from './pages/lessons-content/introduct
 import { IntroductionContent6Component } from './pages/lessons-content/introduction/introduction-content-6/introduction-content-6.component';
 import { IntroductionContent7Component } from './pages/lessons-content/introduction/introduction-content-7/introduction-content-7.component';
 import { IntroductionContent8Component } from './pages/lessons-content/introduction/introduction-content-8/introduction-content-8.component';
+import { AbstractionContent1Component } from './pages/lessons-content/abstraction/abstraction-content-1/abstraction-content-1.component';
+import { AbstractionContent2Component } from './pages/lessons-content/abstraction/abstraction-content-2/abstraction-content-2.component';
+import { AbstractionContent3Component } from './pages/lessons-content/abstraction/abstraction-content-3/abstraction-content-3.component';
+import { AbstractionContent4Component } from './pages/lessons-content/abstraction/abstraction-content-4/abstraction-content-4.component';
 import { EncapsulationContent1Component } from './pages/lessons-content/encapsulation/encapsulation-content-1/encapsulation-content-1.component';
 import { EncapsulationContent2Component } from './pages/lessons-content/encapsulation/encapsulation-content-2/encapsulation-content-2.component';
 import { EncapsulationContent3Component } from './pages/lessons-content/encapsulation/encapsulation-content-3/encapsulation-content-3.component';
@@ -268,6 +272,23 @@ export const routes: Routes = [
                 path: 'object-interactions',
                 component: IntroductionContent8Component
             },
+            // ABSTRACTION CONTENT
+            {
+                path: 'understanding-abstraction',
+                component: AbstractionContent1Component
+            },
+            {
+                path: 'abstract-classes',
+                component: AbstractionContent2Component
+            },
+            {
+                path: 'interfaces',
+                component: AbstractionContent3Component
+            },
+            {
+                path: 'implementation-in-java-abstraction',
+                component: AbstractionContent4Component
+            },
 
             // ENCAPSULATION CONTENT
             {
@@ -287,7 +308,7 @@ export const routes: Routes = [
                 component: EncapsulationContent4Component
             },
             {
-                path: 'implementation-in-java',
+                path: 'implementation-in-java-encapsulation',
                 component: EncapsulationContent5Component
             },
 
