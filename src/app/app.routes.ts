@@ -57,6 +57,12 @@ import { EncapsulationContent2Component } from './pages/lessons-content/encapsul
 import { EncapsulationContent3Component } from './pages/lessons-content/encapsulation/encapsulation-content-3/encapsulation-content-3.component';
 import { EncapsulationContent4Component } from './pages/lessons-content/encapsulation/encapsulation-content-4/encapsulation-content-4.component';
 import { EncapsulationContent5Component } from './pages/lessons-content/encapsulation/encapsulation-content-5/encapsulation-content-5.component';
+import { InheritanceContent1Component } from './pages/lessons-content/inheritance/inheritance-content-1/inheritance-content-1.component';
+import { InheritanceContent2Component } from './pages/lessons-content/inheritance/inheritance-content-2/inheritance-content-2.component';
+import { InheritanceContent3Component } from './pages/lessons-content/inheritance/inheritance-content-3/inheritance-content-3.component';
+import { InheritanceContent4Component } from './pages/lessons-content/inheritance/inheritance-content-4/inheritance-content-4.component';
+import { InheritanceContent5Component } from './pages/lessons-content/inheritance/inheritance-content-5/inheritance-content-5.component';
+import { InheritanceContent6Component } from './pages/lessons-content/inheritance/inheritance-content-6/inheritance-content-6.component';
 import { PolymorphismContent1Component } from './pages/lessons-content/polymorphism/polymorphism-content-1/polymorphism-content-1.component';
 import { PolymorphismContent2Component } from './pages/lessons-content/polymorphism/polymorphism-content-2/polymorphism-content-2.component';
 import { PolymorphismContent3Component } from './pages/lessons-content/polymorphism/polymorphism-content-3/polymorphism-content-3.component';
@@ -317,6 +323,33 @@ export const routes: Routes = [
                 path: 'implementation-in-java-encapsulation',
                 component: EncapsulationContent5Component
             },
+
+            // INHERITANCE CONTENT
+            {
+                path: 'understanding-inheritance',
+                component: InheritanceContent1Component
+            },
+            {
+                path: 'single-inheritance',
+                component: InheritanceContent2Component
+            },
+            {
+                path: 'types-of-inheritance-in-java',
+                component: InheritanceContent3Component
+            },
+            {
+                path: 'method-overriding',
+                component: InheritanceContent4Component
+            },
+            {
+                path: 'advanced-inheritance-concepts',
+                component: InheritanceContent5Component
+            },
+            {
+                path: 'implementation-in-java-inheritance',
+                component: InheritanceContent6Component
+            },
+
             // POLYMORPHISM CONTENT
             {
                 path: 'understanding-polymorphism',
