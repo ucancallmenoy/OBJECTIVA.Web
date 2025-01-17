@@ -57,6 +57,12 @@ import { EncapsulationContent2Component } from './pages/lessons-content/encapsul
 import { EncapsulationContent3Component } from './pages/lessons-content/encapsulation/encapsulation-content-3/encapsulation-content-3.component';
 import { EncapsulationContent4Component } from './pages/lessons-content/encapsulation/encapsulation-content-4/encapsulation-content-4.component';
 import { EncapsulationContent5Component } from './pages/lessons-content/encapsulation/encapsulation-content-5/encapsulation-content-5.component';
+import { PolymorphismContent1Component } from './pages/lessons-content/polymorphism/polymorphism-content-1/polymorphism-content-1.component';
+import { PolymorphismContent2Component } from './pages/lessons-content/polymorphism/polymorphism-content-2/polymorphism-content-2.component';
+import { PolymorphismContent3Component } from './pages/lessons-content/polymorphism/polymorphism-content-3/polymorphism-content-3.component';
+import { PolymorphismContent4Component } from './pages/lessons-content/polymorphism/polymorphism-content-4/polymorphism-content-4.component';
+import { PolymorphismContent5Component } from './pages/lessons-content/polymorphism/polymorphism-content-5/polymorphism-content-5.component';
+import { PolymorphismContent6Component } from './pages/lessons-content/polymorphism/polymorphism-content-6/polymorphism-content-6.component';
 import { Quiz1Component } from './pages/quiz-content/quiz-1/quiz-1.component';
 
 export const routes: Routes = [
@@ -311,7 +317,31 @@ export const routes: Routes = [
                 path: 'implementation-in-java-encapsulation',
                 component: EncapsulationContent5Component
             },
-
+            // POLYMORPHISM CONTENT
+            {
+                path: 'understanding-polymorphism',
+                component: PolymorphismContent1Component
+            },
+            {
+                path: 'compile-time-polymorphism',
+                component: PolymorphismContent2Component
+            },
+            {
+                path: 'runtime-polymorphism',
+                component: PolymorphismContent3Component
+            },
+            {
+                path: 'advanced-polymorphic-concepts',
+                component: PolymorphismContent4Component
+            },
+            {
+                path: 'polymorphism-with-interfaces',
+                component: PolymorphismContent5Component
+            },
+            {
+                path: 'implementation-in-java-polymorphism',
+                component: PolymorphismContent6Component
+            },
         ]
     },
     
