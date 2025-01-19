@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
-
+import { LessonProgressService } from '../../../services/lesson-progress.service'; // copy
 
 @Component({
   selector: 'app-encapsulation',
@@ -11,8 +11,9 @@ import { Router } from '@angular/router';
   templateUrl: './encapsulation.component.html',
   styleUrl: './encapsulation.component.css'
 })
-export class EncapsulationComponent {
-  constructor(private router: Router) {}
+export class EncapsulationComponent implements OnInit{
+  constructor(private router: Router, private progressService: LessonProgressService) {} 
+  lessonProgress: { [key: string]: boolean } = {}; // copy
 
   lesson1Overview() {
     this.router.navigate(['understanding-encapsulation-overview']);
@@ -31,5 +32,19 @@ export class EncapsulationComponent {
   }
   lesson6Overview() {
     this.router.navigate(['encapsulation-implementation-in-java-overview']);
+  }
+
+  // To load the progress of the user
+  ngOnInit() {
+    this.loadProgress();
+  }
+
+  loadProgress() {
+    this.progressService.getProgress().subscribe({
+      next: (response) => {
+        this.lessonProgress = response.data;
+      },
+      error: (error) => console.error('Error loading progress:', error)
+    });
   }
 }

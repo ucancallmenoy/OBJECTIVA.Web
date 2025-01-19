@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { LessonProgressService } from '../../../../services/lesson-progress.service'; // copy
 
 @Component({
   selector: 'app-inheritance-content-6',
@@ -10,6 +11,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './inheritance-content-6.component.css'
 })
 export class InheritanceContent6Component {
+  constructor(private progressService: LessonProgressService) {}
+
 // Track the visible sections
 visibleSections: number = 1;
 
@@ -19,5 +22,12 @@ showNextSection(sectionId: string) {
   setTimeout(() => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   }, 100); // Delay to ensure DOM updates
+
+  if (this.visibleSections === 7) { // Change the number of depending on the last number of the button
+    this.progressService.updateProgress('inheritance-lesson-6', true).subscribe({
+      next: (response) => console.log('Progress updated successfully'),
+      error: (error) => console.error('Error updating progress:', error)
+    });
+  }
 }
 }

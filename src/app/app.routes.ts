@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { authGuard } from './guards/auth.guard';
 import { LoginRegisterComponent } from './pages/login-register/login-register.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
@@ -85,6 +86,7 @@ export const routes: Routes = [
     {
         path: '',
         component: LayoutComponent,
+        canActivate: [authGuard],
         children: [
             {
                 path: 'homepage',
@@ -381,7 +383,8 @@ export const routes: Routes = [
     // QUIZ (NO HEADER NAV) ROUTES
     {
         path: 'quiz-about-object-oriented-programming',
-        component: Quiz1Component
+        component: Quiz1Component,
+        canActivate: [authGuard]
     },
 
 ];

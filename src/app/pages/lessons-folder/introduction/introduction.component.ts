@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LessonProgressService } from '../../../services/lesson-progress.service'; // copy
 
 @Component({
   selector: 'app-introduction',
@@ -10,8 +11,9 @@ import { Router } from '@angular/router';
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.css'
 })
-export class IntroductionComponent {
-  constructor(private router: Router) {}
+export class IntroductionComponent implements OnInit {
+  constructor(private router: Router, private progressService: LessonProgressService) {} 
+  lessonProgress: { [key: string]: boolean } = {}; // copy
 
   lesson1Overview(){
     this.router.navigate(['introduction-to-object-oriented-programming-overview']);
@@ -37,4 +39,19 @@ export class IntroductionComponent {
   lesson8Overview(){
     this.router.navigate(['object-interactions-overview']);
   }
+
+  // To load the progress of the user
+  ngOnInit() {
+    this.loadProgress();
+  }
+
+  loadProgress() {
+    this.progressService.getProgress().subscribe({
+      next: (response) => {
+        this.lessonProgress = response.data;
+      },
+      error: (error) => console.error('Error loading progress:', error)
+    });
+  }
+
 }

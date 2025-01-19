@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { LessonProgressService } from '../../../services/lesson-progress.service'; // copy
 
 @Component({
   selector: 'app-inheritance',
@@ -10,8 +11,9 @@ import { RouterModule } from '@angular/router';
   templateUrl: './inheritance.component.html',
   styleUrl: './inheritance.component.css'
 })
-export class InheritanceComponent {
-  constructor(private router: Router) {}
+export class InheritanceComponent implements OnInit{
+  constructor(private router: Router, private progressService: LessonProgressService) {} 
+  lessonProgress: { [key: string]: boolean } = {}; // copy
   
   lesson1Overview() {
     this.router.navigate(['understanding-inheritance-overview']);
@@ -30,5 +32,19 @@ export class InheritanceComponent {
   }
   lesson6Overview() {
     this.router.navigate(['inheritance-implementation-in-java-overview']);
+  }
+
+  // To load the progress of the user
+  ngOnInit() {
+    this.loadProgress();
+  }
+
+  loadProgress() {
+    this.progressService.getProgress().subscribe({
+      next: (response) => {
+        this.lessonProgress = response.data;
+      },
+      error: (error) => console.error('Error loading progress:', error)
+    });
   }
 }
